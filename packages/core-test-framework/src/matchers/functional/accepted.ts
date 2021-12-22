@@ -20,7 +20,7 @@ expect.extend({
         let error: string;
 
         try {
-            const { body } = await got.post(`http://localhost:4003/api/transactions`, {
+            const { body } = await got.post(`http://localhost:6003/api/transactions`, {
                 body: JSON.stringify({ transactions: [transaction] }),
             });
 
@@ -54,7 +54,7 @@ expect.extend({
         let error: string;
 
         try {
-            const { body } = await got.post(`http://localhost:4003/api/transactions`, {
+            const { body } = await got.post(`http://localhost:6003/api/transactions`, {
                 body: JSON.stringify({ transactions }),
             });
 
@@ -85,7 +85,7 @@ expect.extend({
 
         try {
             for (const tx of transactions) {
-                const { body } = await got.post(`http://localhost:4003/api/transactions`, {
+                const { body } = await got.post(`http://localhost:6003/api/transactions`, {
                     body: JSON.stringify({ transactions: [tx] }),
                 });
 

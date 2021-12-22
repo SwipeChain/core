@@ -1,25 +1,7 @@
 {
-    "list": [
-        {
-            "ip": "167.114.29.51",
-            "port": 4002
-        },
-        {
-            "ip": "167.114.29.52",
-            "port": 4002
-        },
-        {
-            "ip": "167.114.29.53",
-            "port": 4002
-        },
-        {
-            "ip": "167.114.29.54",
-            "port": 4002
-        },
-        {
-            "ip": "167.114.29.55",
-            "port": 4002
-        }
-    ],
-    "sources": ["https://raw.githubusercontent.com/ARKEcosystem/peers/master/devnet.json"]
+    "list": [{
+        "ip": "65.108.82.49",
+        "port": 6001
+    }],
+    "sources": ["https://raw.githubusercontent.com/swipechain/peers/master/devnet.json"]
 }

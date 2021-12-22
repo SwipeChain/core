@@ -21,7 +21,7 @@ expect.extend({
 
         let errors;
         try {
-            const { body } = await got.get(`http://localhost:4003/api/entities/${transaction.id}`);
+            const { body } = await got.get(`http://localhost:6003/api/entities/${transaction.id}`);
 
             const parsedBody = JSON.parse(body);
 
@@ -52,7 +52,7 @@ expect.extend({
 
         let errors;
         try {
-            const { body } = await got.get(`http://localhost:4003/api/entities/${registrationId}`);
+            const { body } = await got.get(`http://localhost:6003/api/entities/${registrationId}`);
 
             const parsedBody = JSON.parse(body);
 
@@ -81,7 +81,7 @@ expect.extend({
         try {
             const entityAsset: MagistrateInterfaces.IEntityAsset = updateTransaction.asset as MagistrateInterfaces.IEntityAsset;
 
-            const { body } = await got.get(`http://localhost:4003/api/entities/${entityAsset.registrationId}`);
+            const { body } = await got.get(`http://localhost:6003/api/entities/${entityAsset.registrationId}`);
 
             const parsedBody = JSON.parse(body);
 

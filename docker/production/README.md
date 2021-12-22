@@ -45,10 +45,10 @@ services:
     container_name: core-devnet
     restart: always
     ports:
-     - "4002:4002"
-     - "4003:4003"
+     - "6001:6001"
+     - "6003:6003"
      - "4040:4040"
-     - "127.0.0.1:4004:4004"
+     - "127.0.0.1:6004:6004"
      - "127.0.0.1:8080:8080"
     cap_add:
       - SYS_NICE
@@ -88,11 +88,11 @@ CORE_DB_USERNAME=node
 CORE_DB_PASSWORD=password
 CORE_DB_DATABASE=core_devnet
 CORE_P2P_HOST=0.0.0.0
-CORE_P2P_PORT=4002
+CORE_P2P_PORT=6002
 CORE_API_HOST=0.0.0.0
-CORE_API_PORT=4003
+CORE_API_PORT=6003
 CORE_WEBHOOKS_HOST=0.0.0.0
-CORE_WEBHOOKS_PORT=4004
+CORE_WEBHOOKS_PORT=6004
 ```
 
 **_MainNet_**
@@ -119,10 +119,10 @@ services:
     container_name: core-mainnet
     restart: always
     ports:
-     - "4001:4001"
-     - "4003:4003"
+     - "6001:6001"
+     - "6003:6003"
      - "4040:4040"
-     - "127.0.0.1:4004:4004"
+     - "127.0.0.1:6004:6004"
      - "127.0.0.1:8080:8080"
     cap_add:
       - SYS_NICE
@@ -162,11 +162,11 @@ CORE_DB_USERNAME=node
 CORE_DB_PASSWORD=password
 CORE_DB_DATABASE=core_mainnet
 CORE_P2P_HOST=0.0.0.0
-CORE_P2P_PORT=4001
+CORE_P2P_PORT=6001
 CORE_API_HOST=0.0.0.0
-CORE_API_PORT=4003
+CORE_API_PORT=6003
 CORE_WEBHOOKS_HOST=0.0.0.0
-CORE_WEBHOOKS_PORT=4004
+CORE_WEBHOOKS_PORT=6004
 ```
 
 _If you prefer to use custom DB Name, DB User and DB Password simply adjust variables `POSTGRES_PASSWORD`, `POSTGRES_USER`, `POSTGRES_DB`, `CORE_DB_PASSWORD`, `CORE_DB_USERNAME` and `CORE_DB_DATABASE` correspondingly._

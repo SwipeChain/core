@@ -14,7 +14,7 @@ export class ApiHelpers {
     public async request(method: string, path: string, params = {}, headers = {}): Promise<any> {
         // Build URL params from _params_ object for GET / DELETE requests
         const getParams = querystring.stringify(params);
-        const url = `http://localhost:4003/api/${path}`;
+        const url = `http://localhost:6003/api/${path}`;
 
         // Injecting the request into Hapi server
         const injectOptions = {

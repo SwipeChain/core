@@ -16,7 +16,7 @@ expect.extend({
         let pass = false;
 
         try {
-            const { body } = await got.get(`http://localhost:4003/api/transactions/${id}`);
+            const { body } = await got.get(`http://localhost:6003/api/transactions/${id}`);
 
             const parsedBody = JSON.parse(body);
 

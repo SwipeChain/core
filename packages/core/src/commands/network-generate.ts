@@ -366,10 +366,10 @@ export class Command extends Commands.Command {
         { name: "coreDBPassword", description: "Core database password.", schema: Joi.string() },
         { name: "coreDBDatabase", description: "Core database database.", schema: Joi.string() },
 
-        { name: "coreP2PPort", description: "Core P2P port.", schema: Joi.number(), default: 4000 },
-        { name: "coreAPIPort", description: "Core API port.", schema: Joi.number(), default: 4003 },
-        { name: "coreWebhooksPort", description: "Core Webhooks port.", schema: Joi.number(), default: 4004 },
-        { name: "coreMonitorPort", description: "Core Webhooks port.", schema: Joi.number(), default: 4005 },
+        { name: "coreP2PPort", description: "Core P2P port.", schema: Joi.number(), default: 6000 },
+        { name: "coreAPIPort", description: "Core API port.", schema: Joi.number(), default: 6003 },
+        { name: "coreWebhooksPort", description: "Core Webhooks port.", schema: Joi.number(), default: 6004 },
+        { name: "coreMonitorPort", description: "Core Webhooks port.", schema: Joi.number(), default: 6005 },
 
         // Peers
         {

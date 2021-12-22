@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-#mainnet_ports P2P_GLOBAL=4001 / devnet_ports P2P_GLOBAL=4002 / testnet_ports P2P_GLOBAL=4000
-P2P_GLOBAL=4001
+#mainnet_ports P2P_GLOBAL=6001 / devnet_ports P2P_GLOBAL=6001 / testnet_ports P2P_GLOBAL=6000
+P2P_GLOBAL=6001
 P2P_GLOBAL_CONN=10
 
 #Initialize p2p limiter

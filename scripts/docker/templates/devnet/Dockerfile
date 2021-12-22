@@ -13,4 +13,4 @@ RUN apt-get update && \
     vim && \
     rm -rf /var/lib/apt/lists/*
 
-EXPOSE 4002 4003 4012 4022 4040
+EXPOSE 6001 6002 6003 6012 6022 4040

@@ -18,10 +18,10 @@ services:
     image: core
     container_name: {token}-devnet-core
     ports:
-     - "4002:4002"
-     - "4003:4003"
-     - "4012:4012"
-     - "4022:4022"
+     - "6002:6002"
+     - "6003:6003"
+     - "6012:6012"
+     - "6022:6022"
      - "4040:4040"
     volumes:
      - core:/core

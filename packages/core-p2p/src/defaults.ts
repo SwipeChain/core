@@ -1,7 +1,7 @@
 export const defaults = {
     server: {
         hostname: process.env.CORE_P2P_HOST || "0.0.0.0",
-        port: process.env.CORE_P2P_PORT || 4002,
+        port: process.env.CORE_P2P_PORT || 6001,
         logLevel: process.env.CORE_NETWORK_NAME === "testnet" ? 1 : 0,
     },
     /**
@@ -11,7 +11,7 @@ export const defaults = {
     /**
      * The number of peers we expect to be available to start a relay
      */
-    minimumNetworkReach: process.env.CORE_P2P_MIN_NETWORK_REACH || 20,
+    minimumNetworkReach: process.env.CORE_P2P_MIN_NETWORK_REACH || 5,
     /**
      * The timeout to verify a peer. [milliseconds]
      */

@@ -13,7 +13,7 @@ export class RestClient {
      * @memberof RestClient
      */
     public static async get(path: string, opts?: Utils.HttpOptions): Promise<Utils.HttpResponse> {
-        return Utils.http.get(`http://localhost:4003/api/${path}`, opts);
+        return Utils.http.get(`http://localhost:6003/api/${path}`, opts);
     }
 
     /**
@@ -24,7 +24,7 @@ export class RestClient {
      * @memberof RestClient
      */
     public static async post(path: string, body): Promise<Utils.HttpResponse> {
-        return Utils.http.post(`http://localhost:4003/api/${path}`, { body });
+        return Utils.http.post(`http://localhost:6003/api/${path}`, { body });
     }
 
     /**
