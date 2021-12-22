@@ -55,7 +55,7 @@ services:
       - SYS_RESOURCE
       - SYS_TIME
     volumes:
-     - ~/.config/ark-core:/home/node/.config/ark-core
+     - ~/.config/sxp-core:/home/node/.config/sxp-core
      - ~/.local/share/ark-core:/home/node/.local/share/ark-core
      - ~/.local/state/ark-core:/home/node/.local/state/ark-core
      - /etc/timezone:/etc/timezone:ro
@@ -129,7 +129,7 @@ services:
       - SYS_RESOURCE
       - SYS_TIME
     volumes:
-     - ~/.config/ark-core:/home/node/.config/ark-core
+     - ~/.config/sxp-core:/home/node/.config/sxp-core
      - ~/.local/share/ark-core:/home/node/.local/share/ark-core
      - ~/.local/state/ark-core:/home/node/.local/state/ark-core
      - /etc/timezone:/etc/timezone:ro

@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 sudo /usr/sbin/ntpd -s
 
-sudo rm -rf /home/node/.config/ark-core/*
+sudo rm -rf /home/node/.config/sxp-core/*
 sudo rm -rf /home/node/.local/state/ark-core/*
 sudo chown node:node -R /home/node
 sudo ln -s /home/node/.yarn/bin/ark /usr/bin/ark
 ark config:publish --network=$NETWORK
-echo > /home/node/.config/ark-core/$NETWORK/.env
+echo > /home/node/.config/sxp-core/$NETWORK/.env
 
 if [ "$MODE" = "forger" ]; then
   SECRET=`openssl rsautl -decrypt -inkey /run/secrets/secret.key -in /run/secrets/secret.dat`
@@ -30,7 +30,7 @@ fi
 
 # forging
 if [ "$MODE" = "forger" ] && [ -n "$SECRET" ] && [ -n "$CORE_FORGER_PASSWORD" ]; then
-    export CORE_FORGER_BIP38=$(grep bip38 /home/node/.config/ark-core/$NETWORK/delegates.json | awk '{print $2}' | tr -d '"')
+    export CORE_FORGER_BIP38=$(grep bip38 /home/node/.config/sxp-core/$NETWORK/delegates.json | awk '{print $2}' | tr -d '"')
     export CORE_FORGER_PASSWORD
     sudo rm -rf /run/secrets/*
     ark core:run

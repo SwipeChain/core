@@ -14,20 +14,20 @@ node ./scripts/upgrade/upgrade.js
 # https://github.com/ARKEcosystem/core/blob/develop/scripts/upgrade/upgrade.js#L206
 cd ~
 
-if [ -f .config/ark-core/devnet/.env ]; then
-    sed -i 's/ARK_/CORE_/g' .config/ark-core/devnet/.env
+if [ -f .config/sxp-core/devnet/.env ]; then
+    sed -i 's/ARK_/CORE_/g' .config/sxp-core/devnet/.env
 fi
 
-if [ -f .config/ark-core/devnet/plugins.js ]; then
-    sed -i 's/ARK_/CORE_/g' .config/ark-core/devnet/plugins.js
+if [ -f .config/sxp-core/devnet/plugins.js ]; then
+    sed -i 's/ARK_/CORE_/g' .config/sxp-core/devnet/plugins.js
 fi
 
-if [ -f .config/ark-core/mainnet/.env ]; then
-    sed -i 's/ARK_/CORE_/g' .config/ark-core/mainnet/.env
+if [ -f .config/sxp-core/mainnet/.env ]; then
+    sed -i 's/ARK_/CORE_/g' .config/sxp-core/mainnet/.env
 fi
 
-if [ -f .config/ark-core/mainnet/plugins.js ]; then
-    sed -i 's/ARK_/CORE_/g' .config/ark-core/mainnet/plugins.js
+if [ -f .config/sxp-core/mainnet/plugins.js ]; then
+    sed -i 's/ARK_/CORE_/g' .config/sxp-core/mainnet/plugins.js
 fi
 
 cd ~/ark-core
