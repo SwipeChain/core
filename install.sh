@@ -212,20 +212,37 @@ fi
 
 success "Installed system updates!"
 
-heading "Installing ARK Core..."
+heading "Installing SXP Core..."
 
-while ! yarn global add @arkecosystem/core ; do
-    read -p "Installing ARK Core failed, do you want to retry? [y/N]: " choice
-    if [[ ! "$choice" =~ ^(yes|y|Y) ]] ; then
-        exit 1
-    fi
+shopt -s expand_aliases
+alias ark="$HOME/core-sxp/packages/core/bin/run $@ --token=sxp"
+echo 'alias sxp="$HOME/core-sxp/packages/core/bin/run $@ --token=sxp"' >> ~/.bashrc
+
+rm -rf "$HOME/core-sxp"
+git clone "https://github.com/SwipeChain/core" "$HOME/core-sxp" || FAILED="Y"
+if [ "$FAILED" == "Y" ]; then
+    echo "Failed to fetch core repo with origin 'https://github.com/SwipeChain/core'"
+
+    exit 1
+fi
+
+cd "$HOME/core-sxp"
+
+YARN_SETUP="N"
+while [ "$YARN_SETUP" == "N" ]; do
+  YARN_SETUP="Y"
+  rm -rf "$HOME/.cache/yarn"
+  yarn setup || YARN_SETUP="N"
 done
+rm -rf "$HOME/.config/@sxp"
+rm -rf "$HOME/.config/@sxp"
+rm -rf "$HOME/.config/sxp-core"
 
 echo 'export PATH=$(yarn global bin):$PATH' >> ~/.bashrc
 export PATH=$(yarn global bin):$PATH
 ark config:publish
 
-success "Installed ARK Core!"
+success "Installed SXP Core!"
 
 readNonempty() {
     prompt=${1}
